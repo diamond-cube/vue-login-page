@@ -30,28 +30,17 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref } from "vue";
-export default {
-  name: "App",
 
-  setup() {
-    let userName = ref("");
-    let password = ref("");
+let userName = ref("");
+let password = ref("");
 
-    function signInHandler() {
-      console.log(userName.value, password.value);
-      userName.value = "";
-      password.value = "";
-    }
-
-    return {
-      userName,
-      password,
-      signInHandler,
-    };
-  },
-};
+function signInHandler() {
+  console.log(userName.value, password.value);
+  userName.value = "";
+  password.value = "";
+}
 </script>
 
 <style>
